@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day!</title>
+
+
+    <link rel="icon" href="images/pngwing.com.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://unpkg.com/pattern.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+    <section class="main-section">
+
+        <h1>Hey Happy Valentine's!</h1>
+
+        <div class="image-container">
+            <img class="image1" src="https://media3.giphy.com/media/hyKaEPBmHHBHnodqpI/giphy.gif?cid=ecf05e47rx13blol4wv6p73pgnorf4mrvpvykjy1zvfvf8zr&ep=v1_stickers_search&rid=giphy.gif&ct=s" alt="">
+        
+            <img class="image2" src="https://media1.giphy.com/media/gCxd0kUSR6I9dflWgm/giphy.gif?cid=ecf05e473cljl83p0ck2rys98vdvvzgo2ffm43eo3a5po2x7&ep=v1_stickers_search&rid=giphy.gif&ct=s" alt="">
+    
+        </div>
+
+
+
+
+    </section>
+   
+
+    <hr>
+
+    <section class="second-section">
+
+
+            <p class="typing-demo">"Let us always meet each other with smile, for the smile is the beginning of love." - Mother Teresa </p>
+
+            <p class="typing-demo">Valentine, you are a-maze-ing.</p>
+
+            <p class="typing-demo">“Love is a game that two can play and both win.” —Eva Gabor</p>
+
+       
+        
+    </section>
+
+
+    <hr>
+
+
+
+
+    <section class="third-section" >
+        
+        <p>Here's a playlist for you</p>
+            
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/72bSqQaCHs0mXe0A9onb21?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+
+    </section>
+
+
+
+
+    <hr>
+
+
+    <footer>
+
+        <p>Made by Alexander Fajartin</p>
+        <p id="current-time"></p>
+
+    </footer>
+
+
+    <hr>
+
+
+
+
+
+
+
+
+    <section class="fourth-section">
+
+        <div class="envelope">
+        </div>
+
+        <div class="card">
+            <div class="back"></div>
+            <div class="front">
+              <div class="f-box">
+                <img src="https://assets.codepen.io/4927073/ValCard.png" alt="">
+              </div>
+            </div>
+          
+            <div class="text-container">
+          
+              <p>
+                Here's a letter for you <br><br>
+
+                I hope all is going good with you and that you’re enjoying your Valentines day! I wanted to take a moment to write you a little love letter. <br><br>
+
+                I just wanted to drop you a quick note to say how much I appreciate you. You’re one of the most special people in my life grateful to meet you.
+              </p>
+            </div>
+          </div>
+
+
+
+    </section>
+
+
+
+
+ 
+
+
+
+
+</body>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var phrases = document.querySelectorAll('.second-section p');
+        var index = 0;
+
+        function displayNextPhrase() {
+            phrases[index].style.display = 'none';
+            index = (index + 1) % phrases.length;
+            phrases[index].style.display = 'block';
+        }
+
+        // Initial display
+        displayNextPhrase();
+
+        // Set interval to display the next phrase every 5 seconds
+        setInterval(displayNextPhrase, 10000);
+    });
+</script>
+
+<script>
+    // JavaScript code to display the current time
+    function updateCurrentTime() {
+        var currentTimeElement = document.getElementById("current-time");
+        var currentTime = new Date();
+        var hours = currentTime.getHours();
+        var minutes = currentTime.getMinutes();
+        var seconds = currentTime.getSeconds();
+
+        // Add leading zero if needed
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        // Display the current time in the specified format
+        var formattedTime = hours + ":" + minutes + ":" + seconds;
+        currentTimeElement.textContent = "Current time: " + formattedTime;
+    }
+
+    // Update the current time every second
+    setInterval(updateCurrentTime, 1000);
+
+    // Call the function to display the current time immediately
+    updateCurrentTime();
+</script>
+</html>
